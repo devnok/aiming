@@ -1,0 +1,6 @@
+module Pods_Aiming_AimingTests {
+  umbrella header "Pods-Aiming-AimingTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

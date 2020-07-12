@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" id="prefix__구성_요소_2_1" width="70" height="70" data-name="구성 요소 2 – 1" viewBox="0 0 70 70">
+    <defs>
+        <style>
+            .prefix__cls-2{fill:#2b2b2b}
+        </style>
+    </defs>
+    <circle id="prefix__타원_4" cx="35" cy="35" r="35" fill="#fff" data-name="타원 4"/>
+    <g id="prefix__그룹_22" data-name="그룹 22" transform="translate(16.537 20.242)">
+        <g id="prefix__그룹_12" data-name="그룹 12" transform="translate(1.584 8.938)">
+            <g id="prefix__그룹_11" data-name="그룹 11">
+                <path id="prefix__사각형_8" d="M0 0H17.332V2.451H0z" class="prefix__cls-2" data-name="사각형 8" transform="rotate(-45 14.794 6.128)"/>
+            </g>
+        </g>
+        <g id="prefix__그룹_14" data-name="그룹 14" transform="translate(21.194 8.939)">
+            <g id="prefix__그룹_13" data-name="그룹 13">
+                <path id="prefix__사각형_9" d="M0 0H2.451V17.332H0z" class="prefix__cls-2" data-name="사각형 9" transform="rotate(-45 2.092 .867)"/>
+            </g>
+        </g>
+        <g id="prefix__그룹_16" data-name="그룹 16">
+            <g id="prefix__그룹_15" data-name="그룹 15">
+                <path id="prefix__패스_11" d="M130.316 149.333H98.451A2.451 2.451 0 0 0 96 151.784v19.609a2.451 2.451 0 0 0 2.451 2.451h7.349v-2.451h-7.349v-19.609h31.865v19.609h-7.353v2.451h7.353a2.451 2.451 0 0 0 2.451-2.451v-19.609a2.451 2.451 0 0 0-2.451-2.451z" class="prefix__cls-2" data-name="패스 11" transform="translate(-96 -149.333)"/>
+            </g>
+        </g>
+        <g id="prefix__그룹_18" data-name="그룹 18" transform="translate(1.87 1.373)">
+            <g id="prefix__그룹_17" data-name="그룹 17">
+                <path id="prefix__패스_12" d="M144.142 161.28l-15.352 8.265-15.352-8.265-1.162 2.157 15.932 8.579a1.221 1.221 0 0 0 1.162 0l15.932-8.579z" class="prefix__cls-2" data-name="패스 12" transform="translate(-112.277 -161.28)"/>
+            </g>
+        </g>
+        <g id="prefix__그룹_20" data-name="그룹 20" transform="translate(11.03 17.193)">
+            <g id="prefix__그룹_19" data-name="그룹 19">
+                <path id="prefix__패스_13" d="M206.526 308.268l-6.128-8.811a1.219 1.219 0 0 0-.309-.278 1.367 1.367 0 0 0-1.774.278l-6.128 8.811a1.02 1.02 0 0 0-.186.584 1.169 1.169 0 0 0 1.226 1.1h2.451v5.507h2.451v-6.608a1.169 1.169 0 0 0-1.226-1.1h-1.464l3.916-5.631 3.922 5.632h-1.471a1.169 1.169 0 0 0-1.226 1.1v6.608h2.451v-5.507h2.451a1.33 1.33 0 0 0 .654-.167 1.038 1.038 0 0 0 .39-1.518z" class="prefix__cls-2" data-name="패스 13" transform="translate(-192.001 -298.97)"/>
+            </g>
+        </g>
+        <g id="prefix__그룹_21" data-name="그룹 21">
+            <g id="prefix__그룹_15-2" data-name="그룹 15">
+                <path id="prefix__패스_11-2" d="M130.316 149.333H98.451A2.451 2.451 0 0 0 96 151.784v19.609a2.451 2.451 0 0 0 2.451 2.451h7.349v-2.451h-7.349v-19.609h31.865v19.609h-7.353v2.451h7.353a2.451 2.451 0 0 0 2.451-2.451v-19.609a2.451 2.451 0 0 0-2.451-2.451z" class="prefix__cls-2" data-name="패스 11" transform="translate(-96 -149.333)"/>
+            </g>
+        </g>
+        <path id="prefix__다각형_2" d="M5 0l5 9H0z" class="prefix__cls-2" data-name="다각형 2" transform="translate(13.463 18.758)"/>
+        <rect id="prefix__사각형_10" width="8" height="10" class="prefix__cls-2" data-name="사각형 10" rx="1" transform="translate(14.463 23.758)"/>
+    </g>
+</svg>
