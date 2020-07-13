@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1920" viewBox="0 0 1080 1920">
+    <defs>
+        <linearGradient id="prefix__linear-gradient" x1=".5" x2=".5" y2="1" gradientUnits="objectBoundingBox">
+            <stop offset="0"/>
+            <stop offset="1" stop-color="#2a2a2a"/>
+        </linearGradient>
+    </defs>
+    <path id="prefix__사각형_82" fill="url(#prefix__linear-gradient)" d="M0 0H1080V1920H0z" data-name="사각형 82"/>
+</svg>

@@ -1,2 +1,4 @@
 CFBundleDisplayName = "더 에이밍";
 NSPhotoLibraryUsageDescription = "카메라 권한에 접근하도록 허용버튼을 눌러주세요.";
+NSMicrophoneUsageDescription = "마이크 권한에 접근하도록 허용버튼을 눌러주세요.";
+NSPhotoLibraryUsageDescription = "사진앨범에 접근하도록 허용버튼을 눌러주세요.";

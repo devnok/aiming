@@ -18,6 +18,7 @@ import {
 
 import Navigator from 'app/navigation';
 import configureStore from 'app/store/configureStore';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
 
 const CombinedDefaultTheme = {
   ...PaperDefaultTheme,
@@ -45,7 +46,9 @@ export default function Entrypoint() {
   return (
     <Provider store={store}>
       <PersistGate loading={<ActivityIndicator />} persistor={persistor}>
-        <RootNavigation />
+        <SafeAreaProvider>
+          <RootNavigation />
+        </SafeAreaProvider>
       </PersistGate>
     </Provider>
   );

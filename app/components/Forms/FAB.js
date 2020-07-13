@@ -22,7 +22,7 @@ const Button = ({
   size: sizeProp,
   onPress = () => { },
 }) => {
-  const len = large ? 144 : medium ? 96 : small ? 48 : 96;
+  const len = large ? 144 : medium ? 96 : small ? 48 : 24;
   const size = sizeProp || {
     width: len,
     height: len,

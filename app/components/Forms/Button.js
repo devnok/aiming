@@ -21,8 +21,8 @@ const LogoContainer = styled.View`
   left: 24px;
 `;
 
-const Button = ({ text, bgColor, color, logo }) => (
-  <Container bgColor={bgColor}>
+const Button = ({ text, bgColor, color, logo, onPress }) => (
+  <Container bgColor={bgColor} onPress={onPress}>
     {logo && <LogoContainer>{logo}</LogoContainer>}
     <Text color={color}>{text}</Text>
   </Container>

@@ -3,7 +3,6 @@ import styled from 'styled-components/native';
 import metrics from '../../config/metrics';
 
 const Container = styled.View`
-  margin: 0 21%;
   margin-bottom: ${props =>
     props.space ? 112.6 : (metrics.screenRatio - 0.5) * 28}px;
 `;
