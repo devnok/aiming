@@ -6,6 +6,7 @@ import AppStyles from '../config/styles';
 import Logo from '../components/Logo';
 import CloseButton from '../components/CloseButton';
 import HeaderRight from '../components/HeaderRight';
+import RecordPhoto from '../screens/Photo/RecordPhoto';
 
 const Stack = createStackNavigator();
 
@@ -24,7 +25,8 @@ const PhotoNavigation = ({ navigation }) => {
         headerTitle: () => <Logo style={logoStyle} />,
         headerTitleAlign: 'center',
       }}>
-      <Stack.Screen name="TakePhoto" component={TakePhoto} />
+      {/* <Stack.Screen name="TakePhoto" component={TakePhoto} /> */}
+      <Stack.Screen name="RecordPhoto" component={RecordPhoto} />
       <Stack.Screen
         name="EditPhoto"
         component={EditPhoto}

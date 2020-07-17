@@ -15,6 +15,7 @@ const AppStyles = {
     COLOR_DARK_SEPERATOR: '#d4d4d4',
     COLOR_TEXT_BLACK: '#2b2b2b',
     COLOR_TEXT_PLACEHOLDER: '#a7a7a7',
+    COLOR_BLACK_TRANSPARENT: '#00000088',
   },
   fonts: {
     FONT_REGULAR: 'NanumBarunGothicOTF',

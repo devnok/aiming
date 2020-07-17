@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" id="prefix__구성_요소_31_1" width="159" height="161" data-name="구성 요소 31 – 1" viewBox="0 0 159 161">
+    <defs>
+        <style>
+            .prefix__cls-2{fill:#008ee5}.prefix__cls-3{fill:#2a2a2a}
+        </style>
+    </defs>
+    <g id="prefix__구성_요소_17_2" data-name="구성 요소 17 – 2">
+        <rect id="prefix__사각형_68" width="123.611" height="123.611" fill="#fff" data-name="사각형 68" rx="15" transform="translate(17.333 19.331)"/>
+        <rect id="prefix__사각형_69" width="37" height="16" class="prefix__cls-2" data-name="사각형 69" rx="8" transform="rotate(-180 18.5 44.5)"/>
+        <rect id="prefix__사각형_70" width="37" height="16" class="prefix__cls-2" data-name="사각형 70" rx="8" transform="rotate(-180 79.5 44.5)"/>
+        <rect id="prefix__사각형_71" width="39" height="17" class="prefix__cls-2" data-name="사각형 71" rx="8.5" transform="rotate(90 44 44)"/>
+        <rect id="prefix__사각형_72" width="39" height="17" class="prefix__cls-2" data-name="사각형 72" rx="8.5" transform="rotate(90 -17 105)"/>
+    </g>
+    <g id="prefix__그룹_88" data-name="그룹 88" transform="translate(40.859 44.039)">
+        <g id="prefix__그룹_41" data-name="그룹 41">
+            <g id="prefix__그룹_40" data-name="그룹 40">
+                <path id="prefix__패스_76" d="M603.228 1314.829a6.9 6.9 0 0 0-9.739 0l-19.475 19.471a6.9 6.9 0 0 0 0 9.738l23.4 23.393 29.215-29.215z" class="prefix__cls-3" data-name="패스 76" transform="translate(-572.001 -1312.817)"/>
+            </g>
+        </g>
+        <g id="prefix__그룹_43" data-name="그룹 43" transform="translate(37.045 69.177)">
+            <g id="prefix__그룹_42" data-name="그룹 42">
+                <path id="prefix__패스_77" d="M688.546 1483.3h-22.952a2.295 2.295 0 1 0 0 4.59h22.952a2.295 2.295 0 1 0 0-4.59z" class="prefix__cls-3" data-name="패스 77" transform="translate(-663.299 -1483.303)"/>
+            </g>
+        </g>
+        <g id="prefix__그룹_45" data-name="그룹 45" transform="translate(27.865 69.177)">
+            <g id="prefix__그룹_44" data-name="그룹 44">
+                <circle id="prefix__타원_9" cx="2.295" cy="2.295" r="2.295" class="prefix__cls-3" data-name="타원 9"/>
+            </g>
+        </g>
+        <g id="prefix__그룹_47" data-name="그룹 47" transform="translate(28.651 28.65)">
+            <g id="prefix__그룹_46" data-name="그룹 46">
+                <path id="prefix__패스_78" d="M688.336 1399.932l-16.51-16.508-29.214 29.214 6.723 6.722h29.308l9.69-9.689a6.9 6.9 0 0 0 .003-9.739z" class="prefix__cls-3" data-name="패스 78" transform="translate(-642.612 -1383.424)"/>
+            </g>
+        </g>
+    </g>
+</svg>

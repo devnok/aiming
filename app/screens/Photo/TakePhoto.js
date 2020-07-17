@@ -8,8 +8,7 @@ import AimIcon from 'app/assets/aim.svg';
 import RotateIcon from 'app/assets/rotate.svg';
 import { RNCamera } from 'react-native-camera';
 import ZoomView from '../../components/ZoomView.js';
-import metrics from '../../config/metrics.js';
-import { Platform } from 'react-native';
+import ImagePicker from 'react-native-image-picker';
 
 const Container = styled.View`
   flex: 1;
@@ -29,7 +28,13 @@ const Bottom = styled.View`
 const cameraStyle = {
   flex: 1,
 };
-
+const options = {
+  mediaType: 'image',
+  storageOptions: {
+    skipBackup: true,
+    path: 'images',
+  },
+};
 const TakePhoto = ({ navigation }) => {
   const [zoom, setZoom] = useState(0);
   const [isCameraBack, setIsCameraBack] = useState(true);
@@ -40,9 +45,19 @@ const TakePhoto = ({ navigation }) => {
     navigation.navigate('EditPhoto', { source: data.uri });
   };
   const onZoomProgress = p => {
-    console.log(p);
     setZoom(p);
   };
+  const getPictureFromGallery = () => {
+    ImagePicker.launchImageLibrary(options, res => {
+      if (res.didCancel) {
+        console.log('User cancelled image picker');
+      } else if (res.error) {
+        console.log('ImagePicker Error: ', res.error);
+      } else {
+        navigation.navigate('EditPhoto', { source: res.uri });
+      }
+    });
+  }
   return (
     <Container>
       <ZoomView
@@ -78,7 +93,7 @@ const TakePhoto = ({ navigation }) => {
         />
       </ZoomView>
       <Bottom>
-        <FAB small>
+        <FAB small onPress={getPictureFromGallery}>
           <GalleryIcon width={36} height={30} />
         </FAB>
         <FAB small onPress={takePicture}>

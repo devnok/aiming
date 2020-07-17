@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" id="prefix__구성_요소_33_1" width="159" height="161" data-name="구성 요소 33 – 1" viewBox="0 0 159 161">
+    <defs>
+        <style>
+            .prefix__cls-2{fill:#008ee5}.prefix__cls-3{fill:#2a2a2a}
+        </style>
+    </defs>
+    <g id="prefix__구성_요소_17_4" data-name="구성 요소 17 – 4">
+        <rect id="prefix__사각형_68" width="123.611" height="123.611" fill="#fff" data-name="사각형 68" rx="15" transform="translate(17.333 19.331)"/>
+        <rect id="prefix__사각형_69" width="37" height="16" class="prefix__cls-2" data-name="사각형 69" rx="8" transform="rotate(-180 18.5 44.5)"/>
+        <rect id="prefix__사각형_70" width="37" height="16" class="prefix__cls-2" data-name="사각형 70" rx="8" transform="rotate(-180 79.5 44.5)"/>
+        <rect id="prefix__사각형_71" width="39" height="17" class="prefix__cls-2" data-name="사각형 71" rx="8.5" transform="rotate(90 44 44)"/>
+        <rect id="prefix__사각형_72" width="39" height="17" class="prefix__cls-2" data-name="사각형 72" rx="8.5" transform="rotate(90 -17 105)"/>
+    </g>
+    <g id="prefix__그룹_92" data-name="그룹 92" transform="translate(49.604 46.483)">
+        <g id="prefix__그룹_54" data-name="그룹 54" transform="translate(0 13.621)">
+            <g id="prefix__그룹_53" data-name="그룹 53">
+                <path id="prefix__패스_80" d="M1513.542 1348.826l-44.417 44.417 8.173 8.173 44.417-44.416zm-6.968 12.475l6.968-6.968 2.667 2.666-6.968 6.968z" class="prefix__cls-3" data-name="패스 80" transform="translate(-1469.125 -1348.826)"/>
+            </g>
+        </g>
+        <g id="prefix__그룹_56" data-name="그룹 56" transform="translate(53.005 5.323)">
+            <g id="prefix__그룹_55" data-name="그룹 55">
+                <path id="prefix__사각형_79" d="M0 0H6.887V3.894H0z" class="prefix__cls-3" data-name="사각형 79" transform="rotate(-45 5.879 2.435)"/>
+            </g>
+        </g>
+        <g id="prefix__그룹_58" data-name="그룹 58" transform="translate(52.372 32.699)">
+            <g id="prefix__그룹_57" data-name="그룹 57">
+                <path id="prefix__사각형_80" d="M0 0H3.894V7.017H0z" class="prefix__cls-3" data-name="사각형 80" transform="rotate(-45 3.323 1.377)"/>
+            </g>
+        </g>
+        <g id="prefix__그룹_60" data-name="그룹 60" transform="translate(25.54 5.865)">
+            <g id="prefix__그룹_59" data-name="그룹 59">
+                <path id="prefix__사각형_81" d="M0 0H3.894V6.973H0z" class="prefix__cls-3" data-name="사각형 81" transform="rotate(-45 3.323 1.377)"/>
+            </g>
+        </g>
+        <g id="prefix__그룹_62" data-name="그룹 62" transform="translate(58.897 21.191)">
+            <g id="prefix__그룹_61" data-name="그룹 61">
+                <path id="prefix__패스_81" d="M1617.134 1366.948h-7.021v3.894h7.054v-3.894z" class="prefix__cls-3" data-name="패스 81" transform="translate(-1610.113 -1366.948)"/>
+            </g>
+        </g>
+        <g id="prefix__그룹_64" data-name="그룹 64" transform="translate(40.866)">
+            <g id="prefix__그룹_63" data-name="그룹 63">
+                <path id="prefix__패스_82" d="M1566.951 1316.222v7.021h3.894v-7.023z" class="prefix__cls-3" data-name="패스 82" transform="translate(-1566.951 -1316.22)"/>
+            </g>
+        </g>
+    </g>
+</svg>

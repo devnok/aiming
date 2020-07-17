@@ -1,12 +1,12 @@
 import React from 'react';
-import styled from 'styled-components/native';
 import { PanResponder, View } from 'react-native';
 import metrics from '../config/metrics';
+import AppStyles from '../config/styles';
 
 const containerStyle = {
   width: '100%',
   height: metrics.screenHeight - 68,
-  backgroundColor: 'yellow',
+  backgroundColor: AppStyles.color.COLOR_PLACEHOLDER,
 };
 const ZoomView = ({ children, onZoomProgress, onZoomEnd, onZoomStart }) => {
   const _panResponder = PanResponder.create({
