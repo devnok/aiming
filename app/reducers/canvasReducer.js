@@ -12,6 +12,10 @@ const initialState = {
   next: [],
   isLoading: false,
   isChanged: false,
+  screen: {
+    width: 0,
+    height: 0,
+  },
 };
 
 export const canvasReducer = createReducer(initialState, {
@@ -28,6 +32,7 @@ export const canvasReducer = createReducer(initialState, {
         },
       },
       next: [],
+      screen: action.payload.screen,
     };
   },
   [canvasTypes.ERASE_BOX](state) {
@@ -61,6 +66,9 @@ export const canvasReducer = createReducer(initialState, {
       };
     }
     return state;
+  },
+  [canvasTypes.CLEAR](state) {
+    return initialState;
   },
   [canvasTypes.UPLOAD_VIDEO.REQUEST](state, action) {
     return {

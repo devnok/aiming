@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef, useCallback } from 'react';
 import Svg, { Rect } from 'react-native-svg';
 import { PanGestureHandler, State } from 'react-native-gesture-handler';
 import AppStyles from '../config/styles';
@@ -7,9 +7,11 @@ import metrics from '../config/metrics';
 import Video from 'react-native-video';
 import { useDispatch, useSelector } from 'react-redux';
 import * as CanvasActions from '../actions/CanvasActions';
-import { useNavigation, useRoute } from '@react-navigation/native';
+import { useRoute, useFocusEffect } from '@react-navigation/native';
 import Overlay from './Overlay.js';
 import Loading from './Loading';
+import { Portal } from 'react-native-paper';
+import HeaderRight from './HeaderRight';
 
 const Container = styled.View`
   flex: 1;
@@ -27,9 +29,14 @@ const Content = styled(Video)`
   align-self: center;
 `;
 const Canvas = ({ selectEnabled, eraseEnabled }) => {
-  const { source } = useRoute().params;
+  const { source: sourceParam, codec } = useRoute().params;
+  const [source, setSource] = useState(sourceParam);
   const dispatch = useDispatch();
   const [layout, setLayout] = useState({
+    width: metrics.screenWidth,
+    height: metrics.screenHeight,
+  });
+  const [screenLayout, setScreenLayout] = useState({
     width: metrics.screenWidth,
     height: metrics.screenHeight,
   });
@@ -75,20 +82,33 @@ const Canvas = ({ selectEnabled, eraseEnabled }) => {
       const y2 = Math.max(y, y + height);
       setIsDrawing(false);
 
-      dispatch(CanvasActions.selectBox({ x1, y1, x2, y2 }));
+      dispatch(
+        CanvasActions.selectBox({ x1, y1, x2, y2, screen: screenLayout }),
+      );
     }
     return null;
   };
-  const H = useRef(null);
   const video = useRef(null);
   const [paused, setPaused] = useState(true);
 
   const isLoading = useSelector(state => state.canvasReducer.isLoading);
 
   const box = useSelector(state => state.canvasReducer.current.box);
+  const checkBox = () => box && box.x1 && box.x2 && box.y1 && box.y2;
 
+  useFocusEffect(
+    useCallback(() => {
+      console.log('canvas focused');
+      dispatch(CanvasActions.clear());
+
+      return () => {};
+    }, [dispatch]),
+  );
   return (
     <>
+      <Portal>
+        <HeaderRight source={source} codec={codec} layout={layout} />
+      </Portal>
       {isLoading && (
         <Overlay>
           <Loading text={'AI가 마스킹된 오브젝트를 처리하고 있습니다'} />
@@ -119,7 +139,7 @@ const Canvas = ({ selectEnabled, eraseEnabled }) => {
           <Svg
             height="100%"
             width="100%"
-            onLayout={e => (H.current = e.nativeEvent.layout.height)}>
+            onLayout={e => setScreenLayout(e.nativeEvent.layout)}>
             {isDrawing && (
               <Rect
                 onPress={() => eraseEnabled && eraseSelected()}
@@ -132,7 +152,7 @@ const Canvas = ({ selectEnabled, eraseEnabled }) => {
                 stroke={AppStyles.color.COLOR_PRIMARY}
               />
             )}
-            {box && !isDrawing && (
+            {checkBox() && !isDrawing && (
               <Rect
                 onPress={() => eraseEnabled && eraseSelected()}
                 x={box.x1}

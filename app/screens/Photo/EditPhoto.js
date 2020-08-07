@@ -1,10 +1,9 @@
-import React, { useState, useRef, useCallback } from 'react';
+import React, { useState, useCallback } from 'react';
 import styled from 'styled-components/native';
 import FAB from '../../components/Forms/FAB.js';
 import AppStyles from '../../config/styles.js';
-import { useRoute, useFocusEffect } from '@react-navigation/native';
+import { useFocusEffect } from '@react-navigation/native';
 import { Snackbar } from 'react-native-paper';
-import AutoHeightImage from 'react-native-auto-height-image';
 import Canvas from '../../components/Canvas.js';
 import Overlay from '../../components/Overlay.js';
 import YesOrNoBox from '../../components/YesOrNoBox.js';
@@ -66,8 +65,6 @@ const Bar = styled(Snackbar)`
 const BarText = styled.Text`
   color: rgba(255, 255, 255, 0.8);
   text-align: center;
-`;
-const Image = styled(AutoHeightImage)`
 `;
 const FABSize = {
   width: 56,

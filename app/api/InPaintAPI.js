@@ -10,7 +10,7 @@ export const uploadVideo = file => {
   });
 };
 
-export const updateBox = (x, y, w, h, filename) => {
+export const updateBox = ({ x, y, w, h, filename }) => {
   return apiClient.post('box', {
     x,
     y,
@@ -20,6 +20,6 @@ export const updateBox = (x, y, w, h, filename) => {
   });
 };
 
-export const fetchVideo = filename => {
+export const fetchVideo = ({filename}) => {
   return apiClient.get('done/' + filename);
 };

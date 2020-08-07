@@ -1,7 +1,5 @@
 import React, { useRef, useEffect } from 'react';
-import styled from 'styled-components/native';
-import { Portal, overlay } from 'react-native-paper';
-import AppStyles from '../config/styles';
+import { Portal } from 'react-native-paper';
 import { Animated, Easing } from 'react-native';
 
 export default ({ children, visible = true }) => {

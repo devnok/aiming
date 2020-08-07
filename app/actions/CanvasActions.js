@@ -11,3 +11,4 @@ export const updateBox = makeAsyncActionCreator(canvasTypes.UPDATE_BOX);
 export const fetchVideo = makeAsyncActionCreator(canvasTypes.FETCH_VIDEO);
 export const undo = makeActionCreator(canvasTypes.UNDO);
 export const redo = makeActionCreator(canvasTypes.REDO);
+export const clear = makeActionCreator(canvasTypes.CLEAR);

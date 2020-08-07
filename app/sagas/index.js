@@ -7,6 +7,6 @@ import { uploadVideoSaga, updateBoxSaga, fetchVideoSaga } from './canvasSaga';
 
 export default function* watch() {
   yield takeLatest(canvasTypes.UPLOAD_VIDEO.INDEX, uploadVideoSaga);
-  yield takeEvery(canvasTypes.UPLOAD_VIDEO.SUCCESS, updateBoxSaga);
-  yield takeEvery(canvasTypes.UPDATE_BOX.SUCCESS, fetchVideoSaga);
+  yield takeLatest(canvasTypes.UPLOAD_VIDEO.SUCCESS, updateBoxSaga);
+  yield takeLatest(canvasTypes.UPDATE_BOX.SUCCESS, fetchVideoSaga);
 }

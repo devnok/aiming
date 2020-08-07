@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect } from 'react';
+import React, { useRef, useState } from 'react';
 import styled from 'styled-components/native';
 import FAB from '../../components/Forms/FAB.js';
 import AppStyles from '../../config/styles.js';
@@ -9,7 +9,6 @@ import AimActiveIcon from 'app/assets/aim_active.svg';
 import RotateIcon from 'app/assets/rotate.svg';
 import { RNCamera } from 'react-native-camera';
 import ImagePicker from 'react-native-image-picker';
-import Icon from 'react-native-vector-icons/Ionicons';
 
 const BACK_TYPE = RNCamera.Constants.Type.back;
 const FRONT_TYPE = RNCamera.Constants.Type.front;
@@ -161,9 +160,6 @@ const RecordPhoto = ({ navigation }) => {
         <FAB small onPress={() => setIsCameraBack(!isCameraBack)}>
           <RotateIcon width={40} height={48} />
         </FAB>
-        <Timer>
-          {time}
-        </Timer>
       </Bottom>
     </Container>
   );
