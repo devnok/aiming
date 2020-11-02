@@ -20,6 +20,9 @@ export const updateBox = ({ x, y, w, h, filename }) => {
   });
 };
 
-export const fetchVideo = ({filename}) => {
+export const fetchVideoDone = ({ filename }) => {
   return apiClient.get('done/' + filename);
+};
+export const fetchVideo = ({ filename }) => {
+  return apiClient.get('output/' + filename);
 };

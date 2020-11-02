@@ -11,6 +11,7 @@ const initialState = {
   },
   next: [],
   isLoading: false,
+  source: null,
   isChanged: false,
   screen: {
     width: 0,
@@ -68,7 +69,10 @@ export const canvasReducer = createReducer(initialState, {
     return state;
   },
   [canvasTypes.CLEAR](state) {
-    return initialState;
+    return {
+      ...initialState,
+      source: state.source,
+    };
   },
   [canvasTypes.UPLOAD_VIDEO.REQUEST](state, action) {
     return {
@@ -106,6 +110,24 @@ export const canvasReducer = createReducer(initialState, {
       isLoading: false,
     };
   },
+  [canvasTypes.FETCH_VIDEO_DONE.REQUEST](state, action) {
+    return {
+      ...state,
+      isLoading: true,
+    };
+  },
+  [canvasTypes.FETCH_VIDEO_DONE.SUCCESS](state, action) {
+    return {
+      ...state,
+      isLoading: false,
+    };
+  },
+  [canvasTypes.FETCH_VIDEO_DONE.FAIL](state, action) {
+    return {
+      ...state,
+      isLoading: true,
+    };
+  },
   [canvasTypes.FETCH_VIDEO.REQUEST](state, action) {
     return {
       ...state,
@@ -116,13 +138,31 @@ export const canvasReducer = createReducer(initialState, {
     return {
       ...state,
       isLoading: false,
-      file: action.payload.file,
     };
   },
   [canvasTypes.FETCH_VIDEO.FAIL](state, action) {
     return {
       ...state,
       isLoading: true,
+    };
+  },
+  [canvasTypes.SET_LOADING](state, action) {
+    return {
+      ...state,
+      isLoading: action.payload,
+    };
+  },
+  [canvasTypes.STOP_FETCH_VIDEO](state, action) {
+    return {
+      ...state,
+      isLoading: false,
+    };
+  },
+  [canvasTypes.SET_SOURCE](state, action) {
+    console.log('SET_SOURCE', state, action);
+    return {
+      ...state,
+      source: action.payload,
     };
   },
 });

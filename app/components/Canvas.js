@@ -1,4 +1,4 @@
-import React, { useState, useRef, useCallback } from 'react';
+import React, { useState, useRef, useCallback, useEffect } from 'react';
 import Svg, { Rect } from 'react-native-svg';
 import { PanGestureHandler, State } from 'react-native-gesture-handler';
 import AppStyles from '../config/styles';
@@ -30,7 +30,6 @@ const Content = styled(Video)`
 `;
 const Canvas = ({ selectEnabled, eraseEnabled }) => {
   const { source: sourceParam, codec } = useRoute().params;
-  const [source, setSource] = useState(sourceParam);
   const dispatch = useDispatch();
   const [layout, setLayout] = useState({
     width: metrics.screenWidth,
@@ -89,29 +88,29 @@ const Canvas = ({ selectEnabled, eraseEnabled }) => {
     return null;
   };
   const video = useRef(null);
-  const [paused, setPaused] = useState(true);
+  const [paused, setPaused] = useState(false);
 
   const isLoading = useSelector(state => state.canvasReducer.isLoading);
+  const source = useSelector(state => state.canvasReducer.source);
 
   const box = useSelector(state => state.canvasReducer.current.box);
   const checkBox = () => box && box.x1 && box.x2 && box.y1 && box.y2;
-
   useFocusEffect(
     useCallback(() => {
-      console.log('canvas focused');
       dispatch(CanvasActions.clear());
-
-      return () => {};
     }, [dispatch]),
   );
+  useEffect(() => {
+    if (!video.current) return;
+  }, [isDrawing]);
   return (
     <>
       <Portal>
         <HeaderRight source={source} codec={codec} layout={layout} />
       </Portal>
-      {isLoading && (
+      {isLoading === true && (
         <Overlay>
-          <Loading text={'AI가 마스킹된 오브젝트를 처리하고 있습니다'} />
+          <Loading text={'AI가 마스킹된 오브젝트를 처리하고 있습니다.'} />
         </Overlay>
       )}
       <PanGestureHandler
@@ -120,21 +119,24 @@ const Canvas = ({ selectEnabled, eraseEnabled }) => {
         onHandlerStateChange={handleHandlerStateChange}>
         <Container>
           <ContentContainer>
-            <Content
-              onLoad={e => {
-                setLayout(e.naturalSize);
-                video.current.seek(0);
-                setPaused(true);
-              }}
-              ref={video}
-              source={{ uri: source }}
-              paused={paused}
-              resizeMode="contain"
-              style={{
-                width: metrics.screenWidth,
-                height: (metrics.screenWidth / layout.width) * layout.height,
-              }}
-            />
+            {source && (
+              <Content
+                onLoad={e => {
+                  setLayout(e.naturalSize);
+                  setPaused(true);
+                  video.current.seek(0);
+                }}
+                repeat={true}
+                ref={video}
+                source={{ uri: source }}
+                paused={paused}
+                resizeMode="contain"
+                style={{
+                  width: metrics.screenWidth,
+                  height: (metrics.screenWidth / layout.width) * layout.height,
+                }}
+              />
+            )}
           </ContentContainer>
           <Svg
             height="100%"

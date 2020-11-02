@@ -15,13 +15,13 @@ export function* apiSaga(api, asyncAction, options, loop = false) {
       yield call(errorHandler, failAction);
       yield put(failAction);
     }
-    yield delay(1000);
+    yield delay(5000);
   } while (loop && !success);
 }
 
 const openModal = ({ action, error }) => {
-  console.warn(error);
-  console.warn(action);
+  // console.warn(error);
+  // console.warn(action);
 };
 
 function* errorHandler(failAction) {

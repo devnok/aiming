@@ -1,8 +1,8 @@
 import axios from 'axios';
 
+const baseURL = 'http://c3.iptime.org:1486';
 const apiClient = axios.create({
-  baseURL: 'http://c3.iptime.org:1486/',
+  baseURL,
   responseType: 'json',
 });
-
-export { apiClient };
+export { apiClient, baseURL };

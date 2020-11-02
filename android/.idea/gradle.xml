@@ -17,15 +17,18 @@
             <option value="$PROJECT_DIR$/../node_modules/@react-native-community/picker/android" />
             <option value="$PROJECT_DIR$/../node_modules/@react-native-community/viewpager/android" />
             <option value="$PROJECT_DIR$/../node_modules/lottie-react-native/src/android" />
+            <option value="$PROJECT_DIR$/../node_modules/react-native-background-downloader/android" />
             <option value="$PROJECT_DIR$/../node_modules/react-native-camera/android" />
             <option value="$PROJECT_DIR$/../node_modules/react-native-fast-image/android" />
             <option value="$PROJECT_DIR$/../node_modules/react-native-gesture-handler/android" />
             <option value="$PROJECT_DIR$/../node_modules/react-native-image-picker/android" />
             <option value="$PROJECT_DIR$/../node_modules/react-native-safe-area-context/android" />
             <option value="$PROJECT_DIR$/../node_modules/react-native-screens/android" />
+            <option value="$PROJECT_DIR$/../node_modules/react-native-splash-screen/android" />
             <option value="$PROJECT_DIR$/../node_modules/react-native-svg/android" />
             <option value="$PROJECT_DIR$/../node_modules/react-native-vector-icons/android" />
             <option value="$PROJECT_DIR$/../node_modules/react-native-video/android" />
+            <option value="$PROJECT_DIR$/../node_modules/rn-fetch-blob/android" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

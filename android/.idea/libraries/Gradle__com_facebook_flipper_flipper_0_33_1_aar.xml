@@ -1,11 +1,12 @@
 <component name="libraryTable">
   <library name="Gradle: com.facebook.flipper:flipper:0.33.1@aar">
     <ANNOTATIONS>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/632d8598092c74c57765589619380e8d/jetified-flipper-0.33.1/annotations.zip!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/511db9c61d3a4230f589543f9cf7ca76/jetified-flipper-0.33.1/annotations.zip!/" />
     </ANNOTATIONS>
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/632d8598092c74c57765589619380e8d/jetified-flipper-0.33.1/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/632d8598092c74c57765589619380e8d/jetified-flipper-0.33.1/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/511db9c61d3a4230f589543f9cf7ca76/jetified-flipper-0.33.1/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/511db9c61d3a4230f589543f9cf7ca76/jetified-flipper-0.33.1/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/511db9c61d3a4230f589543f9cf7ca76/jetified-flipper-0.33.1/res" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.facebook.flipper/flipper/0.33.1/6f31556ce7a6aaf3845702a12f653c54f1e35dcb/flipper-0.33.1-javadoc.jar!/" />

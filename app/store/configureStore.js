@@ -11,7 +11,7 @@ import sagas from 'app/sagas';
 const config = {
   key: 'root',
   storage: AsyncStorage,
-  blacklist: ['loadingReducer'],
+  blacklist: ['loadingReducer', 'canvasReducer'],
   debug: true, //to get useful logging
 };
 

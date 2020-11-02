@@ -9,6 +9,8 @@ import AimActiveIcon from 'app/assets/aim_active.svg';
 import RotateIcon from 'app/assets/rotate.svg';
 import { RNCamera } from 'react-native-camera';
 import ImagePicker from 'react-native-image-picker';
+import { useDispatch } from 'react-redux';
+import * as CanvasActions from '../../actions/CanvasActions';
 
 const BACK_TYPE = RNCamera.Constants.Type.back;
 const FRONT_TYPE = RNCamera.Constants.Type.front;
@@ -46,13 +48,14 @@ const options = {
   },
 };
 
-export const getVideoFromGallery = navigation => {
+export const getVideoFromGallery = (navigation, dispatch) => {
   ImagePicker.launchImageLibrary(options, res => {
     if (res.didCancel) {
       console.log('User cancelled image picker');
     } else if (res.error) {
       console.log('ImagePicker Error: ', res.error);
     } else {
+      dispatch(CanvasActions.setSource(res.uri));
       navigation.navigate('EditPhoto', {
         source: res.uri,
         codec: res.codec || 'mp4',
@@ -62,6 +65,7 @@ export const getVideoFromGallery = navigation => {
 };
 
 const RecordPhoto = ({ navigation }) => {
+  const dispatch = useDispatch();
   const timer = useRef(null);
   const [time, setTime] = useState(0);
   const startTimer = () => {
@@ -106,7 +110,7 @@ const RecordPhoto = ({ navigation }) => {
             setIsRecording(true);
           });
           const data = await promise;
-          console.log(data);
+          dispatch(CanvasActions.setSource(data.uri));
           navigation.navigate('EditPhoto', {
             source: data.uri,
             codec: data.codec || 'mp4',
@@ -147,7 +151,7 @@ const RecordPhoto = ({ navigation }) => {
         }}
       />
       <Bottom>
-        <FAB small onPress={() => getVideoFromGallery(navigation)}>
+        <FAB small onPress={() => getVideoFromGallery(navigation, dispatch)}>
           <GalleryIcon width={36} height={30} />
         </FAB>
         <FAB small onPress={isRecording ? stopVideo : takeVideo}>
