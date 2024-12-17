@@ -1,4 +1,0 @@
-CFBundleDisplayName = "The Aiming";
-NSPhotoLibraryUsageDescription = "This app requires access to the camera.";
-NSMicrophoneUsageDescription = "This app requires access to the mike.";
-NSPhotoLibraryUsageDescription = "This app requires access to the photo library.";
