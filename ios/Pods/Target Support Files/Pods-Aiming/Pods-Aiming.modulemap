@@ -1,6 +1,0 @@
-module Pods_Aiming {
-  umbrella header "Pods-Aiming-umbrella.h"
-
-  export *
-  module * { export * }
-}
