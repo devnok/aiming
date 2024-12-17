@@ -7,9 +7,7 @@
     "ios": "react-native run-ios",
     "start": "react-native start",
     "test": "jest",
-    "lint": "eslint .",
-    "update:pods": "cd ios && pod install --repo-update && cd ..",
-    "postinstall": "yarn run update:pods"
+    "lint": "eslint ."
   },
   "dependencies": {
     "@react-native-community/art": "^1.2.0",
